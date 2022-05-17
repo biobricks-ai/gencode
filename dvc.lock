@@ -1,0 +1,28 @@
+schema: '2.0'
+stages:
+  1_download_gencode:
+    cmd: Rscript R/download.R
+    deps:
+    - path: R/download.R
+      md5: 06dcf63a8b6c59347371a10abb2872c4
+      size: 1060
+    outs:
+    - path: cache/
+      md5: 4c1597e956408e59fa988a58448b8fe3.dir
+      size: 48043727
+      nfiles: 1
+  2_write_parquets:
+    cmd: Rscript R/build.R
+    deps:
+    - path: R/build.R
+      md5: fd49795e8ce9a2fca587ae76467b373a
+      size: 3450
+    - path: cache/
+      md5: 4c1597e956408e59fa988a58448b8fe3.dir
+      size: 48043727
+      nfiles: 1
+    outs:
+    - path: data/
+      md5: 8d168fa8b2677e4130c85bf3cd17a171.dir
+      size: 129424127
+      nfiles: 5

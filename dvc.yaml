@@ -1,0 +1,14 @@
+stages:
+  1_download_gencode:
+    cmd: Rscript R/download.R
+    deps:
+    - R/download.R
+    outs:
+    - cache/
+  2_write_parquets:
+    cmd: Rscript R/build.R
+    deps:
+    - R/build.R
+    - cache/
+    outs:
+    - data/
