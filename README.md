@@ -7,6 +7,8 @@ dependencies:
     url: https://www.gencodegenes.org/human/
 ---
 
+<a href="https://github.com/biobricks-ai/gencode/actions"><img src="https://github.com/biobricks-ai/gencode/actions/workflows/bricktools-check.yaml/badge.svg?branch=main"/></a>
+
 # [GENCODE](https://www.gencodegenes.org/) project
 >The goal of the GENCODE project is to identify and classify all gene features in the human and mouse genomes with high accuracy based on biological evidence, and to release these annotations for the benefit of biomedical research and genome interpretation.
 
